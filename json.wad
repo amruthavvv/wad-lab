@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Example with Inline JSON</title>
+</head>
+<body>
+
+  <h2>Load JSON Data</h2>
+  <button id="loadBtn">Load Data</button>
+
+  <ul id="dataList"></ul>
+
+  <!-- Inline JSON -->
+  <script id="jsonData" type="application/json">
+  [
+    { "id": 1, "name": "John Doe", "email": "john@example.com" },
+    { "id": 2, "name": "Jane Smith", "email": "jane@example.com" },
+    { "id": 3, "name": "Alice Johnson", "email": "alice@example.com" }
+  ]
+  </script>
+
+  <script>
+    const button = document.getElementById('loadBtn');
+    const dataList = document.getElementById('dataList');
+
+    button.addEventListener('click', () => {
+      // Read JSON from the script tag
+      const data = JSON.parse(document.getElementById('jsonData').textContent);
+
+      dataList.innerHTML = ''; // Clear previous data
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.id} - ${item.name} (${item.email})`;
+        dataList.appendChild(li);
+      });
+    });
+  </script>
+
+</body>
+</html>
