@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FORM ELEMENTS</title>
+  </head>
+  <body>
+    <h1>REGISTRATION FORM</h1>
+    <form>
+      <label="name">NAME:</label>
+      <input type="text"><br><br>
+      <label="age">AGE:</label>
+      <input type="number"><br><br>
+      <label ="number">MOBILE NUMBER</label>
+      <input type="tel"><br><br>
+      <label="address">ADDRESS</label>
+      <input type="text"><br><br>
+      <label="male">MALE</label>
+      <input type="radio">
+      <label="female">FEMALE</label>
+      <input type="radio"><br><br>
+      <label="qualification">QUALIFICATION</label>
+      <select name="qualifications">
+        <option>10th</option>
+        <option>8th</option>
+        <option>9th</option>
+        <option>12th</option>
+       </select><br><br>
+      <label="skills">SKILLS</label>
+      <label="html">HTML</label>
+      <input type="checkbox">
+      <label="c programing">CPRO</label>
+       <input type="checkbox">
+      <label="c programing">python</label>
+       <input type="checkbox"><br><br>
+      <label>COURSES</label>
+        <input list="courses" >
+      <datalist id="courses">
+        <option value="IT">
+         <option value="CS">
+          <option value="CE"> 
+      </datalist>
+      <details>
+        <summary>SUMMARY</summary><p>pls fill out this</p>
+        </details><br>
+      <button>submit</button>
+    </form>
+  </body>
+</html>
