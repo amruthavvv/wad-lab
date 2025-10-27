@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive JavaScript Example</title>
+  <style>
+    body {
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    input {
+      margin-top: 20px;
+      padding: 8px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    p {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Interaction Example</h2>
+
+  <button id="colorButton">Change Background Color</button>
+
+  <div>
+    <input type="text" id="textField" placeholder="Hover over me">
+    <p id="message">Move your mouse over the text field!</p>
+  </div>
+
+  <script>
+    const button = document.getElementById('colorButton');
+    const textField = document.getElementById('textField');
+    const message = document.getElementById('message');
+
+    const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'teal', 'lime', 'gold'];
+    let colorIndex = 0;
+
+    button.addEventListener('click', () => {
+      document.body.style.backgroundColor = colors[colorIndex];
+      message.textContent = `Background changed to ${colors[colorIndex]}`;
+      colorIndex = (colorIndex + 1) % colors.length;
+    });
+
+    button.addEventListener('mouseover', () => {
+      button.style.backgroundColor = 'darkblue';
+    });
+
+    button.addEventListener('mouseout', () => {
+      button.style.backgroundColor = 'blue';
+    });
+
+    textField.a
