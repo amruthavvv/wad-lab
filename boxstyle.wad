@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Webpage</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Styled Webpage</h1>
+    <p>HTML and CSS Example with Box Styling, Lists, Tables, and Forms</p>
+  </header>
+
+  <section class="intro-box">
+    <h2>Welcome Section</h2>
+    <p>This section demonstrates <strong>box styling</strong> using margin, padding, and borders in CSS.</p>
+  </section>
+
+  <section class="list-section">
+    <h2>Styled List</h2>
+    <ul class="styled-list">
+      <li>HTML Basics</li>
+      <li>CSS Styling</li>
+      <li>Responsive Design</li>
+      <li>JavaScript Essentials</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+      <label for="course">Course:</label>
+      <select id="course" name="course">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+      </select><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>Student Details Table</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Score</th>
+      </tr>
+      <tr>
+        <td>Alex</td>
+        <td>HTML</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>Sara</td>
+        <td>CSS</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>JavaScript</td>
+        <td>92</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2025 My Webpage | Designed using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
