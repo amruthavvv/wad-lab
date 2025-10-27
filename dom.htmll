@@ -69,4 +69,14 @@
       button.style.backgroundColor = 'blue';
     });
 
-    textField.a
+    textField.addEventListener('mousemove', () => {
+      message.textContent = "You're moving the mouse over the text field!";
+    });
+
+    textField.addEventListener('mouseleave', () => {
+      message.textContent = "Move your mouse over the text field!";
+    });
+  </script>
+
+</body>
+</html>
