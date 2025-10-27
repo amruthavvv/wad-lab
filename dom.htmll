@@ -48,32 +48,35 @@
   </div>
 
   <script>
-    const button = document.getElementById('colorButton');
-    const textField = document.getElementById('textField');
-    const message = document.getElementById('message');
+    var button = document.getElementById('colorButton');
+    var textField = document.getElementById('textField');
+    var message = document.getElementById('message');
 
-    const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'teal', 'lime', 'gold'];
-    let colorIndex = 0;
+    var colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'teal', 'lime', 'gold'];
+    var colorIndex = 0;
 
-    button.addEventListener('click', () => {
+    // Click to change background color
+    button.addEventListener('click', function() {
       document.body.style.backgroundColor = colors[colorIndex];
-      message.textContent = `Background changed to ${colors[colorIndex]}`;
+      message.textContent = 'Background changed to ' + colors[colorIndex];
       colorIndex = (colorIndex + 1) % colors.length;
     });
 
-    button.addEventListener('mouseover', () => {
+    // Hover effect for button
+    button.addEventListener('mouseover', function() {
       button.style.backgroundColor = 'darkblue';
     });
 
-    button.addEventListener('mouseout', () => {
+    button.addEventListener('mouseout', function() {
       button.style.backgroundColor = 'blue';
     });
 
-    textField.addEventListener('mousemove', () => {
+    // Hover effect for input field
+    textField.addEventListener('mouseover', function() {
       message.textContent = "You're moving the mouse over the text field!";
     });
 
-    textField.addEventListener('mouseleave', () => {
+    textField.addEventListener('mouseleave', function() {
       message.textContent = "Move your mouse over the text field!";
     });
   </script>
